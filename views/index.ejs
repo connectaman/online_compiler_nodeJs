@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Compiler</title>
+<link rel="stylesheet" href="/css/style.css" >
+</head>
+<body>
+   <div class="container">
+
+      <div class="row">
+      	 <form id="form1" method="post" action="/compile" >
+         <div class="col">
+           
+               <div class="left">
+                  <label for="program">Program </label>
+                  <textarea id="program" cols="40" rows="30" name="program"><%= code  %></textarea>
+
+               </div>
+         
+         </div>
+         <div class="col">
+           
+               <div class="left">
+                  <label for="result">Input </label>
+                  <textarea id="result" cols="40" rows="30" name="input"><%= input  %></textarea>
+               </div>
+           
+         </div>
+          <div>
+                 <input type="radio" id="code" name="lang" value="c">
+				 <label for="code">C</label>
+				 <input type="radio" id="code" name="lang" value="cpp">
+				 <label for="code">C++</label>
+				 <input type="radio" id="code" name="lang" value="py">
+				 <label for="code">Python</label>
+				 <input type="radio" id="code" name="lang" value="java">
+				 <label for="code">Java</label>
+                  <input type="submit" value="Run" />
+               </div>
+     </form>
+      </div>
+
+      <div class="row">
+      	<center>Output</center>
+      	 <div class="col">
+            <form id="form1">
+               <div class="left">
+                  <label for="program">Result </label>
+                  <textarea id="program" cols="20" rows="10" ><%= result  %></textarea>
+
+               </div>
+               <div>
+                 
+               </div>
+            </form>
+         </div>
+         <div class="col">
+            <form id="form2">
+               <div class="left">
+                  <label for="result">Error </label>
+                  <textarea id="result" cols="20" rows="10" ><%= err  %></textarea>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+<div class="footer">
+  <p>Developed By <a href="http://www.amanulla.ga/">AMAN ULLA</a></p>
+</div>
+</body>
+</html>
